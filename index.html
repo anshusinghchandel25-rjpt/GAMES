@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Night Racer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="game">
+
+        <div class="top-bar">
+            <div>
+                <h1>NIGHT RACER</h1>
+                <p>NEON CITY • STREET RACING</p>
+            </div>
+
+            <div class="stats">
+                <div>SCORE <span id="score">0</span></div>
+                <div>SPEED <span id="speed">0</span> KM/H</div>
+            </div>
+        </div>
+
+        <div class="road-area">
+
+            <div class="city city-left"></div>
+            <div class="city city-right"></div>
+
+            <div class="road">
+
+                <div class="lane-line line1"></div>
+                <div class="lane-line line2"></div>
+                <div class="lane-line line3"></div>
+
+                <div id="player" class="car player-car">
+                    🚗
+                </div>
+
+                <div id="enemy1" class="car enemy-car">
+                    🚘
+                </div>
+
+                <div id="enemy2" class="car enemy-car">
+                    🚙
+                </div>
+
+            </div>
+
+            <div class="nitro-bar">
+                <span>NITRO</span>
+                <div class="bar">
+                    <div id="nitro"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="controls">
+
+            <button id="leftBtn">⬅ LEFT</button>
+
+            <button id="nitroBtn">⚡ NITRO</button>
+
+            <button id="rightBtn">RIGHT ➡</button>
+
+        </div>
+
+        <div class="bottom">
+            <p>Use Arrow Keys or Buttons • Avoid the traffic • Reach maximum speed</p>
+            <button id="restartBtn">RESTART RACE</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

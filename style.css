@@ -1,0 +1,253 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #050505;
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.game {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 50% 20%, #242424 0%, #080808 45%, #000 100%);
+}
+
+.top-bar {
+    width: 100%;
+    padding: 18px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+}
+
+h1 {
+    font-size: 28px;
+    letter-spacing: 4px;
+}
+
+.top-bar p {
+    color: #888;
+    font-size: 12px;
+    margin-top: 4px;
+    letter-spacing: 2px;
+}
+
+.stats {
+    display: flex;
+    gap: 25px;
+    font-size: 12px;
+    color: #999;
+}
+
+.stats span {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.road-area {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.road {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 55%;
+    min-width: 300px;
+    max-width: 650px;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        #111 0%,
+        #292929 10%,
+        #151515 50%,
+        #292929 90%,
+        #111 100%
+    );
+    border-left: 8px solid #555;
+    border-right: 8px solid #555;
+}
+
+.lane-line {
+    position: absolute;
+    width: 7px;
+    height: 80px;
+    background: #ddd;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.7;
+}
+
+.line1 {
+    top: 0;
+}
+
+.line2 {
+    top: 200px;
+}
+
+.line3 {
+    top: 400px;
+}
+
+.car {
+    position: absolute;
+    width: 70px;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    transition: left 0.15s;
+    z-index: 5;
+}
+
+.player-car {
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.enemy-car {
+    top: -130px;
+}
+
+#enemy1 {
+    left: 25%;
+}
+
+#enemy2 {
+    left: 68%;
+}
+
+.city {
+    position: absolute;
+    bottom: 0;
+    width: 22%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        90deg,
+        #090909 0px,
+        #090909 35px,
+        #181818 36px,
+        #181818 70px
+    );
+}
+
+.city-left {
+    left: 0;
+}
+
+.city-right {
+    right: 0;
+}
+
+.nitro-bar {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    width: 180px;
+    z-index: 10;
+}
+
+.nitro-bar span {
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.bar {
+    margin-top: 7px;
+    height: 12px;
+    background: #333;
+    border: 1px solid #777;
+}
+
+#nitro {
+    height: 100%;
+    width: 100%;
+    background: white;
+    transition: width 0.1s;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+button {
+    background: #111;
+    color: white;
+    border: 1px solid #666;
+    padding: 14px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #333;
+}
+
+#nitroBtn {
+    border-color: white;
+}
+
+.bottom {
+    text-align: center;
+    padding: 10px 20px 30px;
+}
+
+.bottom p {
+    color: #777;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+#restartBtn {
+    display: none;
+}
+
+@media (max-width: 600px) {
+
+    .top-bar {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .stats {
+        gap: 10px;
+    }
+
+    .stats span {
+        font-size: 16px;
+    }
+
+    .road-area {
+        height: 520px;
+    }
+
+    .controls {
+        gap: 7px;
+    }
+
+    button {
+        padding: 12px 14px;
+        font-size: 11px;
+    }
+
+}
